@@ -1,0 +1,37 @@
+<%= form_with(model: restaurant_menu, local: true, url:restaurant_menus_path) do |form| %>
+  <% if restaurant_menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(restaurant_menu.errors.count, "error") %> prohibited this restaurant_menu from being saved:</h2>
+
+      <ul>
+        <% restaurant_menu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="field">
+  <%= form.label :image %>
+  <!-- When you return from the confirmation screen to the new creation screen, -->
+  <!-- Description for displaying uploaded image -->
+  <%= image_tag(@restaurant_menu.image.url) if @restaurant_menu.image && @restaurant_menu.image.url %>
+  <%= form.file_field :image %>
+  <%= form.hidden_field :image_cache %>
+</div>
+
+
+  <div class="field">
+    <%= form.label :type_of_food %>
+    <%= form.text_field :type_of_food %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

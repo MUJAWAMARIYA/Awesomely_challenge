@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @restaurant_menu.image.url %>
+</p>
+
+
+<p>
+  <strong>Type of food:</strong>
+  <%= @restaurant_menu.type_of_food %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @restaurant_menu.amount %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_menu_path(@restaurant_menu) %> |
+<%= link_to 'Back', restaurant_menus_path %>
