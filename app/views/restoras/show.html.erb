@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restora.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @restora.location %>
+</p>
+
+<%= link_to 'Edit', edit_restora_path(@restora) %> |
+<%= link_to 'Back', restoras_path %>

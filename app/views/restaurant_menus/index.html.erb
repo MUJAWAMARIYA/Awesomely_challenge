@@ -18,9 +18,9 @@
         <td><%= restaurant_menu.image %></td>
         <td><%= restaurant_menu.type_of_food %></td>
         <td><%= restaurant_menu.amount %></td>
-        <td><%= link_to 'Show', restaurant_menu %></td>
-        <td><%= link_to 'Edit', edit_restaurant_menu_path(restaurant_menu) %></td>
-        <td><%= link_to 'Destroy', restaurant_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', restaurant_menu ,class: "btn btn-danger"%></td>
+       
+        
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Restaurant Menu', new_restaurant_menu_path %>
+<%= link_to 'New Restaurant Menu', new_restaurant_menu_path ,class: "btn btn-danger"%>

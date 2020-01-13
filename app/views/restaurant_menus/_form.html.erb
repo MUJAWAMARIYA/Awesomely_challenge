@@ -23,15 +23,15 @@
 
   <div class="field">
     <%= form.label :type_of_food %>
-    <%= form.text_field :type_of_food %>
+    <%= form.text_field :type_of_food ,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.number_field :amount %>
+    <%= form.number_field :amount ,class: "form-control"%>
   </div>
 
-  <div class="actions">
+  <div class="actions",>
     <%= form.submit %>
   </div>
 <% end %>

@@ -9,5 +9,5 @@
 <%= form_with(model:@restaurant_menu, url:new_restaurant_menu_path, local:true, method:"get") do |form| %>
     
   <%= form.hidden_field :image_cache %>
-  <%= form.submit "Return", name: "back" %>
+  <%= form.submit "Return", name: "back" ,class: "btn btn-danger"%>
 <% end %>

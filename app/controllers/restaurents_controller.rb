@@ -4,7 +4,8 @@ class RestaurentsController < ApplicationController
   # GET /restaurents
   # GET /restaurents.json
   def index
-    @restaurents = Restaurent.all
+    @q = Restaurent.ransack(params[:q])
+    @restaurents = @q.result
   end
 
   # GET /restaurents/1
@@ -17,6 +18,10 @@ class RestaurentsController < ApplicationController
     @restaurent = Restaurent.new
   end
 
+  def home
+    @restaurent = Restaurent.all
+    
+   end
   # GET /restaurents/1/edit
   def edit
   end

@@ -1,0 +1,2 @@
+class Restora < ApplicationRecord
+end

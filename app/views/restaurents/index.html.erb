@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class ="searchs">
+<%= search_form_for @q do |f| %>
+  search by :
+  <%= f.label :name_or_location_cont %>
+  <%= f.search_field :name_or_location_cont %>
+sort by
+<%= sort_link(@q, :name) %>
+  <%= f.submit %>
+<% end %>
+</div>
 
 <h1>Restaurents</h1>
 
@@ -18,9 +28,8 @@
         <td><%= restaurent.name %></td>
         <td><%= restaurent.details %></td>
         <td><%= restaurent.location %></td>
-        <td><%= link_to 'Show', restaurent %></td>
-        <td><%= link_to 'Edit', edit_restaurent_path(restaurent) %></td>
-        <td><%= link_to 'Destroy', restaurent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', restaurent  ,class: "btn btn-danger"%></td>
+       
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Restaurent', new_restaurent_path %>
+<%= link_to 'New Restaurent', new_restaurent_path  ,class: "btn btn-danger"%>
