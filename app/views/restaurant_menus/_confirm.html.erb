@@ -1,7 +1,7 @@
 <h1>confirmation screen</h1>
 <%= form_with(model: @restaurant_menus, url: restaurant_menus_path, local: true) do |form| %>
   <!-- Description for displaying the uploaded image on the confirmation screen -->
-  <%= image_tag(@restaurant_menu.image.url) if @restaurant_menu.image && @restaurant_menu.image.url %>
+  <%= image_tag(@restaurant_menu.image if @restaurant_menu.image && @restaurant_menu %>
   <%= form.hidden_field :image_cache %>
   <%= form.submit "Post" %>
 <% end %>

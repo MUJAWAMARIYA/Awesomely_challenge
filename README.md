@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# requirement
+ * Ruby2.7.0
+ * Ruby on Rails6.0
+ * Bootstrap4.4
+ * PostgreSQL12
+ * HTML5
